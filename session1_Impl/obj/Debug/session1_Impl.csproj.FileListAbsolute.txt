@@ -1,0 +1,8 @@
+D:\c# sample code\session1_Impl\session1_Impl\bin\Debug\session1_Impl.exe.config
+D:\c# sample code\session1_Impl\session1_Impl\bin\Debug\session1_Impl.exe
+D:\c# sample code\session1_Impl\session1_Impl\bin\Debug\session1_Impl.pdb
+D:\c# sample code\session1_Impl\session1_Impl\obj\Debug\session1_Impl.csproj.AssemblyReference.cache
+D:\c# sample code\session1_Impl\session1_Impl\obj\Debug\session1_Impl.csproj.SuggestedBindingRedirects.cache
+D:\c# sample code\session1_Impl\session1_Impl\obj\Debug\session1_Impl.csproj.CoreCompileInputs.cache
+D:\c# sample code\session1_Impl\session1_Impl\obj\Debug\session1_Impl.exe
+D:\c# sample code\session1_Impl\session1_Impl\obj\Debug\session1_Impl.pdb
