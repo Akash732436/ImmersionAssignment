@@ -38,15 +38,18 @@ namespace session1_Impl
 
         public bool CheckIfEqual()
         {
-            Console.Write("For First Line");
+            Console.Write("For First Line ");
             Double Dist1 = LengthOfLine();
-            Console.Write("For Second Line");
+            Console.Write("For Second Line ");
             Double Dist2 = LengthOfLine();
+
             if(Dist1 == Dist2)
             {
                 return true;
             }
             return false;
+            
+
         }
 
         public int CompareLines()
@@ -61,6 +64,7 @@ namespace session1_Impl
             }
             if(Dist1>Dist2) { return 1; }
             return -1;
+
         }
 
     }

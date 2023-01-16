@@ -40,6 +40,10 @@ namespace session1_Impl
                 case '4':
                     empWage.WagesTill100();
                     break;
+                case '5':
+                    int partTime = empWage.PartTimeWage();
+                    Console.WriteLine("Daily wage of employee is " + partTime);
+                    break;
                 default:
                     Console.WriteLine("Choose the correct option");
                     break;
@@ -63,11 +67,11 @@ namespace session1_Impl
                     bool lineEqaul = lineComparison.CheckIfEqual();
                     if (lineEqaul)
                     {
-                        Console.WriteLine("Yes, line are equal");
+                        Console.WriteLine("Lines are equal");
                     }
                     else
                     {
-                        Console.WriteLine("No, Lines are not equal");
+                        Console.WriteLine("Lines are not equal");
                     }
                     break;
                 case '3':
@@ -92,12 +96,15 @@ namespace session1_Impl
 
         static void Main(string[] args)
         {
-            //Uncomment it for employee wage problem.
+            //Uncomment the next line for employee wage problem.
             //EmpWage();
 
 
-            //Uncomment it for line comprison problem
-            //LineCompare();
+            //Uncomment the next line for line comprison problem
+            LineCompare();
+
+
+
             Console.ReadLine();
         }
     }

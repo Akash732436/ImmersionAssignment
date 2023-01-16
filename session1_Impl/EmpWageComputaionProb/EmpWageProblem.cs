@@ -18,12 +18,14 @@ namespace session1_Impl
             Console.WriteLine("2 for calculating daily wage");
             Console.WriteLine("3 for calculating monthly wage");
             Console.WriteLine("4 for calculating wage on constraint");
-            Console.WriteLine("5 for part time employee");
+            Console.WriteLine("5 for wage of part time employee");
 
         }
         public bool IsPresent()
         {
+            //constants
             int Present = 1;
+
             Random random = new Random();
             int empCheck = random.Next(0, 2);
             if (empCheck==Present) return true;
@@ -32,8 +34,10 @@ namespace session1_Impl
 
         public int DailyEmpWage()
         {
+            //constants
             int EmpRatePerHour = 20;
             int EmpHours = 0;
+
             if (IsPresent()) EmpHours = 8;
             else EmpHours = 0;
             int wage = EmpHours * EmpRatePerHour;
@@ -42,7 +46,9 @@ namespace session1_Impl
 
         public int MonthlyEmpWage()
         {
+            //variables
             int MonthlyWage = 0;
+
             for(int i = 0; i < 10; i++)
             {
                 MonthlyWage += DailyEmpWage();
@@ -52,8 +58,10 @@ namespace session1_Impl
 
         public void WagesTill100()
         {
+            //variables
             int wage = 0;
             int workhrs = 0;
+
             for(int i = 0; i < 20; i++)
             {
                 int DailyWage = DailyEmpWage();
@@ -67,6 +75,26 @@ namespace session1_Impl
             }
             Console.WriteLine("Monthly Days are over. Total wage is "+ wage);
             return;
+        }
+
+        public int PartTimeWage()
+        {
+            //constants
+            int WagePerHour = 10;
+            int WorkingHours = 8;
+            //variable
+            bool Present = IsPresent();
+
+            switch (Present)
+            {
+                case true:
+                    int total = WagePerHour * WorkingHours;
+                    return total;
+                default:
+                    return 0;
+
+            }
+
         }
 
         /*
