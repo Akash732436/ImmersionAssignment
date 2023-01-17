@@ -21,6 +21,12 @@ namespace session1_Impl.EmpWageComputaionProb
 
         public CompanyWage()
         {
+            Console.WriteLine("Welcome to Employee wage computation program");
+
+            Console.WriteLine("1 for ateendence");
+            Console.WriteLine("2 for calculating daily wage");
+            Console.WriteLine("3 for calculating monthly wage");
+            Console.WriteLine("4 for calculating wage on constraint");
 
         }
         public CompanyWage(string companyName, int wageRatePerHr, int monthlyWorkingdays, int maxHoursPerMonth)
@@ -29,6 +35,12 @@ namespace session1_Impl.EmpWageComputaionProb
             WagePerHr = wageRatePerHr;
             MonthlyWorkingDays = monthlyWorkingdays;
             MaxHoursPerMonth = maxHoursPerMonth;
+
+            Console.WriteLine("1 for ateendence");
+            Console.WriteLine("2 for calculating daily wage");
+            Console.WriteLine("3 for calculating monthly wage");
+            Console.WriteLine("4 for calculating wage on constraint");
+
         }
 
         public void SetEmpWage()

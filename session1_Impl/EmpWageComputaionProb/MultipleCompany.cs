@@ -28,7 +28,7 @@ namespace session1_Impl.EmpWageComputaionProb
 
         public void DeleteCompany(string CompanyName)
         {
-            foreach (var company in Companies)
+            foreach (var company in Companies.ToList())
             {
                 if (company.GetCompanyName() == CompanyName)
                 {
@@ -48,8 +48,10 @@ namespace session1_Impl.EmpWageComputaionProb
                     Console.WriteLine("Monthly working days: "+ company.GetMonthlyWorkingDays());
                     Console.WriteLine("Max hours per month: "+company.GetMaxHoursPerMonth());
                     Console.WriteLine("Employee wage: "+company.GetEmpWage());
+                    return;
                 }
             }
+            Console.WriteLine("No company found with that name");
         }
 
     }

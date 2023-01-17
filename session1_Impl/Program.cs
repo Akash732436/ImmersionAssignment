@@ -14,7 +14,22 @@ namespace session1_Impl
 
         public static void EmpWage()
         {
-            EmpWageProblem empWage = new EmpWageProblem();
+            Console.WriteLine("Welcome to Employee wage computation program");
+            string CompanyName;
+            int WagePerHour;
+            int MonthlyWorkingDays;
+            int MaxHoursPerMonth;
+
+            Console.WriteLine("Enter Company Name");
+            CompanyName=Console.ReadLine();
+            Console.WriteLine("Enter wages per hour");
+            WagePerHour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter monthly working days");
+            MonthlyWorkingDays= Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter maximum hours per month");
+            MaxHoursPerMonth = Convert.ToInt32(Console.ReadLine());
+
+            CompanyWage empWage = new CompanyWage(CompanyName,WagePerHour,MonthlyWorkingDays,MaxHoursPerMonth);
 
             //Choice of user
             char ch = Convert.ToChar(Console.ReadLine());
@@ -93,14 +108,12 @@ namespace session1_Impl
 
         static void Main(string[] args)
         {
-            //Uncomment the next line for employee wage problem.
-            //EmpWage();
-
+            
 
             //Uncomment the next line for line comprison problem
             //LineCompare();
 
-
+            //adding few companies and saving
             string companyName = "abc";
             int wagePerhr = 20;
             int workdays = 20;
@@ -115,7 +128,17 @@ namespace session1_Impl
             maxHrspermonth = 200;
             multiple.AddCompany(companyName, wagePerhr, workdays, maxHrspermonth);
 
+            //getting info
             multiple.GetCompany("abc");
+            multiple.DeleteCompany("abc");
+            multiple.GetCompany("abc");
+
+            Console.WriteLine("\n\n\n");
+
+
+            //Emp wage problem for single company
+            EmpWage();
+
 
             Console.ReadLine();
         }
