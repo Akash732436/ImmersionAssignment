@@ -10,6 +10,13 @@ namespace session1_Impl
 {
     public class EmpWageProblem
     {
+        private const int EmpFullTime = 1;
+        private const int EmpPartTime = 2;
+        private const int Present = 1;
+        private const int WagePerHour= 20;
+        private const int FullDayHour = 8;
+        private const int PartTimeHour = 4;
+
         public EmpWageProblem()
         {
             Console.WriteLine("Welcome to Employee wage computation program");
@@ -23,8 +30,6 @@ namespace session1_Impl
         }
         public bool IsPresent()
         {
-            //constants
-            int Present = 1;
 
             Random random = new Random();
             int empCheck = random.Next(0, 2);
@@ -34,13 +39,25 @@ namespace session1_Impl
 
         public int DailyEmpWage()
         {
-            //constants
-            int EmpRatePerHour = 20;
             int EmpHours = 0;
 
-            if (IsPresent()) EmpHours = 8;
+            if (IsPresent()) { 
+                Random random= new Random();
+                int EmpType=random.Next(0, 3);
+                int EmpHrs = 0;
+                switch (EmpType)
+                {
+                    case EmpFullTime:
+                        EmpHrs = 8;
+                        break;
+                    case EmpPartTime:
+                        EmpHrs = 4; break;
+                    default: EmpHrs = 0; break;
+                }
+             
+            }
             else EmpHours = 0;
-            int wage = EmpHours * EmpRatePerHour;
+            int wage = EmpHours * WagePerHour;
             return wage;
         }
 
@@ -48,8 +65,7 @@ namespace session1_Impl
         {
             //variables
             int MonthlyWage = 0;
-
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i < 19; i++)
             {
                 MonthlyWage += DailyEmpWage();
             }
@@ -77,25 +93,41 @@ namespace session1_Impl
             return;
         }
 
-        public int PartTimeWage()
-        {
-            //constants
-            int WagePerHour = 10;
-            int WorkingHours = 8;
-            //variable
-            bool Present = IsPresent();
+        //public int PartTimeWage()
+        //{
 
-            switch (Present)
-            {
-                case true:
-                    int total = WagePerHour * WorkingHours;
-                    return total;
-                default:
-                    return 0;
+        //    //int WagePerHour = 10;
+        //    //int WorkingHours = 8;
 
-            }
+        //    //bool Present = IsPresent();
 
-        }
+        //    //switch (Present)
+        //    //{
+        //    //    case true:
+        //    //        int total = WagePerHour * WorkingHours;
+        //    //        return total;
+        //    //    default:
+        //    //        return 0;
+
+        //    //}
+
+
+        //    int EmpHrs = 0;
+        //    Random random=new Random();
+        //    int EmpType=random.Next(0,3);
+        //    switch(EmpType)
+        //    {
+        //        case EmpFullTime:
+        //            EmpHrs = 8;
+        //            break;
+        //        case EmpPartTime:
+        //            EmpHrs = 4; break;
+        //        default: EmpHrs = 0; break;
+        //    }
+        //    int dailyWage = EmpHrs * 20;
+        //    return dailyWage;
+
+        //}
 
         /*
         public void CheckPresentAbsent()
