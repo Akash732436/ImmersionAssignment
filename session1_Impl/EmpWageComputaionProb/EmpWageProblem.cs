@@ -16,7 +16,7 @@ namespace session1_Impl
         private const int WagePerHour= 20;
         private const int FullDayHour = 8;
         private const int PartTimeHour = 4;
-
+        private const int WorkingDaysPerMonth = 20;
         public EmpWageProblem()
         {
             Console.WriteLine("Welcome to Employee wage computation program");
@@ -60,12 +60,41 @@ namespace session1_Impl
             int wage = EmpHours * WagePerHour;
             return wage;
         }
+        //public void EmpWageCompany(string CompanyName,int MaxNoOfWorkingDays,int WagePerhr,int MaxHrsPerMonth)
+        //{
+        //    int CurrEmpHrs = 0;
+        //    int Workdays = 0;
+        //    while(CurrEmpHrs<MaxHrsPerMonth && Workdays < MaxNoOfWorkingDays)
+        //    {
+        //        int TempEmpHrs = 0;
+        //        Random random = new Random();
+        //        int EmpType = random.Next(0,3);
+        //        switch (EmpType)
+        //        {
+        //            case EmpFullTime:
+        //                TempEmpHrs = 8;
+        //                break;
+        //            case EmpPartTime:
+        //                TempEmpHrs = 4;
+        //                break;
+        //            default:break;
+        //        }
+        //        Workdays += 1;
+        //        CurrEmpHrs += TempEmpHrs;
+
+        //    }
+        //    int MonthlyWage = CurrEmpHrs * WagePerhr;
+        //    Console.WriteLine("No of days employee worked in "+CompanyName+": "+Workdays);
+        //    Console.WriteLine("No of hours employee worked in " + CompanyName + ": " +CurrEmpHrs);
+        //    Console.WriteLine("Monthly wage of the employee is: "+MonthlyWage);
+        //    return;
+        //}
 
         public int MonthlyEmpWage()
         {
             //variables
             int MonthlyWage = 0;
-            for(int i = 0; i < 19; i++)
+            for(int i = 0; i < WorkingDaysPerMonth; i++)
             {
                 MonthlyWage += DailyEmpWage();
             }
@@ -78,7 +107,7 @@ namespace session1_Impl
             int wage = 0;
             int workhrs = 0;
 
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < WorkingDaysPerMonth; i++)
             {
                 int DailyWage = DailyEmpWage();
                 if (DailyWage == 160) workhrs += 8;
