@@ -40,10 +40,6 @@ namespace session1_Impl
                 case '4':
                     empWage.WagesTill100();
                     break;
-                case '5':
-                    int partTime = empWage.PartTimeWage();
-                    Console.WriteLine("Daily wage of employee is " + partTime);
-                    break;
                 default:
                     Console.WriteLine("Choose the correct option");
                     break;
@@ -97,11 +93,11 @@ namespace session1_Impl
         static void Main(string[] args)
         {
             //Uncomment the next line for employee wage problem.
-            //EmpWage();
+            EmpWage();
 
 
             //Uncomment the next line for line comprison problem
-            LineCompare();
+            //LineCompare();
 
 
 

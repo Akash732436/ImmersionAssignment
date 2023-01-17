@@ -25,7 +25,6 @@ namespace session1_Impl
             Console.WriteLine("2 for calculating daily wage");
             Console.WriteLine("3 for calculating monthly wage");
             Console.WriteLine("4 for calculating wage on constraint");
-            Console.WriteLine("5 for wage of part time employee");
 
         }
         public bool IsPresent()
@@ -44,15 +43,16 @@ namespace session1_Impl
             if (IsPresent()) { 
                 Random random= new Random();
                 int EmpType=random.Next(0, 3);
-                int EmpHrs = 0;
+                
+                //using switch statement
                 switch (EmpType)
                 {
                     case EmpFullTime:
-                        EmpHrs = 8;
+                        EmpHours = FullDayHour;
                         break;
                     case EmpPartTime:
-                        EmpHrs = 4; break;
-                    default: EmpHrs = 0; break;
+                        EmpHours = PartTimeHour; break;
+                    default: EmpHours = 0; break;
                 }
              
             }
@@ -81,7 +81,8 @@ namespace session1_Impl
             for(int i = 0; i < 20; i++)
             {
                 int DailyWage = DailyEmpWage();
-                if (DailyWage > 0) workhrs += 1;
+                if (DailyWage == 160) workhrs += 8;
+                else if (DailyWage > 0) workhrs += 4;
                 wage += DailyWage;
                 if(workhrs==100)
                 {
