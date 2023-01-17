@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmpWageComputaionProb\CompanyWage.cs" />
     <Compile Include="EmpWageComputaionProb\EmpWageProblem.cs" />
+    <Compile Include="EmpWageComputaionProb\MultipleCompany.cs" />
     <Compile Include="LineComparisonProb\LineComparison.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

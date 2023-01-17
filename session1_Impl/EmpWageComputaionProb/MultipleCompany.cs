@@ -24,7 +24,6 @@ namespace session1_Impl.EmpWageComputaionProb
             company.SetEmpWage();
             Companies.Add(company);
             Console.WriteLine("Company has been added.");
-
         }
 
         public void DeleteCompany(string CompanyName)

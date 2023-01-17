@@ -1,4 +1,5 @@
-﻿using System;
+﻿using session1_Impl.EmpWageComputaionProb;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -93,13 +94,28 @@ namespace session1_Impl
         static void Main(string[] args)
         {
             //Uncomment the next line for employee wage problem.
-            EmpWage();
+            //EmpWage();
 
 
             //Uncomment the next line for line comprison problem
             //LineCompare();
 
 
+            string companyName = "abc";
+            int wagePerhr = 20;
+            int workdays = 20;
+            int maxHrspermonth = 200;
+            MultipleCompany multiple=new MultipleCompany();
+            multiple.AddCompany(companyName, wagePerhr, workdays, maxHrspermonth);
+
+            companyName = "other company";
+            wagePerhr = 10;
+            workdays = 25;
+            wagePerhr = 20;
+            maxHrspermonth = 200;
+            multiple.AddCompany(companyName, wagePerhr, workdays, maxHrspermonth);
+
+            multiple.GetCompany("abc");
 
             Console.ReadLine();
         }
