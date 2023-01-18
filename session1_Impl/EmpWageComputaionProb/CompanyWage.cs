@@ -8,9 +8,9 @@ namespace session1_Impl.EmpWageComputaionProb
 {
     public class CompanyWage
     {
-        private const int Emp_FullTime = 1;
-        private const int Emp_PartTime = 2;
-        private const int Present = 1;
+        public const int Emp_FullTime = 1;
+        public const int Emp_PartTime = 2;
+        public const int Present = 1;
 
         private string CompanyName;
         private int WagePerHr;
@@ -36,41 +36,14 @@ namespace session1_Impl.EmpWageComputaionProb
             MonthlyWorkingDays = monthlyWorkingdays;
             MaxHoursPerMonth = maxHoursPerMonth;
 
-            Console.WriteLine("1 for ateendence");
-            Console.WriteLine("2 for calculating daily wage");
-            Console.WriteLine("3 for calculating monthly wage");
-            Console.WriteLine("4 for calculating wage on constraint");
-
         }
 
-        public void SetEmpWage()
-        {
-            int CurrEmpHrs = 0;
-            int Workdays = 0;
-            while (CurrEmpHrs < MaxHoursPerMonth && Workdays < MonthlyWorkingDays)
-            {
-                int TempEmpHrs = 0;
-                Random random = new Random();
-                int EmpType = random.Next(0, 3);
-                switch (EmpType)
-                {
-                    case Emp_FullTime:
-                        TempEmpHrs = 8;
-                        break;
-                    case Emp_PartTime:
-                        TempEmpHrs = 4;
-                        break;
-                    default: break;
-                }
-                Workdays += 1;
-                CurrEmpHrs += TempEmpHrs;
+        
+        
 
-            }
-            int MonthlyWage = CurrEmpHrs * WagePerHr;
-            Console.WriteLine("No of days employee worked in " + CompanyName + ": " + Workdays);
-            Console.WriteLine("No of hours employee worked in " + CompanyName + ": " + CurrEmpHrs);
-            Console.WriteLine("Monthly wage of the employee is: " + MonthlyWage);
-            EmpWage = MonthlyWage;
+        public void SetEmpWage(int wage)
+        {
+            EmpWage=wage;
             return;
         }
 
@@ -167,6 +140,10 @@ namespace session1_Impl.EmpWageComputaionProb
             Console.WriteLine("Monthly Days are over. Total wage is " + wage);
             return;
         }
+
+
+        
+
 
     }
 }

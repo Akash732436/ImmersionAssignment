@@ -113,12 +113,12 @@ namespace session1_Impl
             //Uncomment the next line for line comprison problem
             //LineCompare();
 
-            //adding few companies and saving
+            //adding few companies
             string companyName = "abc";
             int wagePerhr = 20;
             int workdays = 20;
             int maxHrspermonth = 200;
-            MultipleCompany multiple=new MultipleCompany();
+            IMultipleCompany multiple=new MultipleCompany();
             multiple.AddCompany(companyName, wagePerhr, workdays, maxHrspermonth);
 
             companyName = "other company";
@@ -128,6 +128,10 @@ namespace session1_Impl
             maxHrspermonth = 200;
             multiple.AddCompany(companyName, wagePerhr, workdays, maxHrspermonth);
 
+
+            //setting employee wage
+            multiple.SetEmpWage();
+
             //getting info
             multiple.GetCompany("abc");
             multiple.DeleteCompany("abc");
@@ -136,8 +140,9 @@ namespace session1_Impl
             Console.WriteLine("\n\n\n");
 
 
+            
             //Emp wage problem for single company
-            EmpWage();
+            //EmpWage();
 
 
             Console.ReadLine();
