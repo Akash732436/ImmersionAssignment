@@ -1,4 +1,5 @@
 ﻿using session1_Impl.EmpWageComputaionProb;
+using session1_Impl.LineComparisonProb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +65,7 @@ namespace session1_Impl
 
         public static void LineCompare()
         {
-            LineComparison lineComparison = new LineComparison();
+            ILineComparison lineComparison = new LineComparison();
 
             //Choice of user
             char ch = Convert.ToChar(Console.ReadLine());
@@ -108,7 +109,7 @@ namespace session1_Impl
 
         static void Main(string[] args)
         {
-            
+
 
             //Uncomment the next line for line comprison problem
             //LineCompare();
@@ -118,7 +119,7 @@ namespace session1_Impl
             int wagePerhr = 20;
             int workdays = 20;
             int maxHrspermonth = 200;
-            IMultipleCompany multiple=new MultipleCompany();
+            IMultipleCompany multiple = new MultipleCompany();
             multiple.AddCompany(companyName, wagePerhr, workdays, maxHrspermonth);
 
             companyName = "other company";
@@ -137,10 +138,10 @@ namespace session1_Impl
             multiple.DeleteCompany("abc");
             multiple.GetCompany("abc");
 
-            Console.WriteLine("\n\n\n");
+            Console.WriteLine("\n\n");
 
 
-            
+
             //Emp wage problem for single company
             //EmpWage();
 

@@ -47,6 +47,7 @@
     <Compile Include="EmpWageComputaionProb\EmpWageProblem.cs" />
     <Compile Include="EmpWageComputaionProb\IMultipleCompany.cs" />
     <Compile Include="EmpWageComputaionProb\MultipleCompany.cs" />
+    <Compile Include="LineComparisonProb\ILineComparison.cs" />
     <Compile Include="LineComparisonProb\LineComparison.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
